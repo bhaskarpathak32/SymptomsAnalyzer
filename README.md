@@ -1,1 +1,3 @@
 # SymptomsAnalyzer
+
+We are proposing to build an app which will be useful in gathering patient's data as a training set and based on some machine learning algorithm we can notify everyone's query and suggest them whether to take rest or go and test or should he be worried of corona or some other infection and guide him. This idea can be extended to cover any medical condition and this can be useful in prediction of an infection. This app will benefit both the authorities as well as a commoner in many different ways. Moreover this app can contribute in epidemic or new outbreak detection with it's analytics on new symptom grouping (symptom pattern ) and number or patients and their age group and locality.

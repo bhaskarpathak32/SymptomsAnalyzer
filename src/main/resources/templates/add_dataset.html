@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<form th:action="@{/api/add_to_database}" th:object="${formData}" method="post" >
+  <label for="fname">Name:</label>
+  <input type="text" id="name" name="name" th:field="*{name}" /><br><br>
+
+ 
+  <label>Symptoms</label><br><br><br>
+  <input type="number" id="age" name="age" value="0" min="0" max="200" th:field="*{age}" /> <label for="vehicle232"> age</label><br><br>
+  <input type="number" id="fever" name="fever" value="96" min="92" max="106" th:field="*{fever}" /> <label for="vehicle1"> fever</label><br><br>
+  
+  <input type="checkbox" id="cough" name="cough" value="1" th:field="*{cough}" /><label for="vehicle2"> cough</label><br>
+  
+  <input type="checkbox" id="headache" name="headache" value="1" th:field="*{headache}" /><label for="vehicle3">headache</label><br>
+  
+  <input type="checkbox" id="chest_pain" name="chest_pain" value="1" th:field="*{chest_pain}" /> <label for="vehicle3">cheast pain</label> <br>
+   
+  <input type="checkbox" id="runny_nose" name="runny_nose" value="1" th:field="*{runny_nose}" /><label for="vehicle3">runny nose</label> <br>
+  
+   
+  <input type="checkbox" id="sneeze" name="sneeze" value="1" th:field="*{sneeze}" /><label for="vehicle3">sneeze</label> <br>
+  
+    
+  <input type="checkbox" id="breath_difficulty" name="breath_difficulty" value="1" th:field="*{breath_difficulty}" /><label for="vehicle3">breathing difficulty</label><br>
+  
+  <input type="checkbox" id="bleeding_gum" name="bleeding_gum" value="1" th:field="*{bleeding_gum}" /><label for="vehicle3">bleeding gum</label><br>
+  <input type="checkbox" id="gum_pain" name="gum_pain" value="1" th:field="*{gum_pain}" /><label for="vehicle3">gum pain  </label><br>
+  <input type="checkbox" id="nasal_congestion" name="nasal_congestion" value="1" th:field="*{nasal_congestion}" /><label for="vehicle3">nasal congestion</label><br>
+  <input type="checkbox" id="clogged_ear" name="clogged_ear" value="1" th:field="*{clogged_ear}" /><label for="vehicle3">clogged ear  </label><br>
+  <input type="checkbox" id="throat_pain" name="throat_pain" value="1" th:field="*{throat_pain}" /><label for="vehicle3">throat pain  </label><br>
+  <input type="checkbox" id="ear_pain" name="ear_pain" value="1" th:field="*{ear_pain}" /><label for="vehicle3">earpain</label><br>
+  <input type="checkbox" id="wheezing" name="wheezing" value="1" th:field="*{wheezing}" /><label for="vehicle3">  wheezing</label><br>
+  <input type="checkbox" id="rash" name="rash" value="1" th:field="*{rash}" /><label for="vehicle3">  rash</label><br>
+  <input type="checkbox" id="nausea" name="nausea" value="1" th:field="*{nausea}" /><label for="vehicle3">  nausea</label><br>
+  
+<label for="Disease">Condition:</label>
+  <select name="status" id="status" th:field="*{status}">
+	   <option value="0">STI</option>
+    <option value="1">Simple Cold</option>
+    <option value="2">Eye</option>
+    <option value="3">Unknown</option>
+	<option value="4">Corona</option>
+	 <option value="5">Gum</option>
+	  <option value="6">Skin</option>
+	   <option value="7">Lungs(Pneumonia)</option>
+	    <option value="8">Throat</option>
+	    <option value="9">None</option>
+  </select>
+  <input type="submit" formmethod="post" value="Submit"/>
+</form>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-package com.bhaskar.controller;
+package com.bhaskar.service;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -27,7 +27,7 @@ import com.bhaskar.db.DataRepository;
 
 @Service
 public class TrainNeuralNetworkImpl implements TrainNeuralNetwork {
-	final String HEADER="bleeding_gum,gum_pain,nasal_congestion,clogged_ear,throat_pain,ear_pain,wheezing,rash,nausea,age,cough,fever,headache,chest_pain,runny_nose,sneeze,breath_difficulty";
+	final String HEADER="country,bleeding_gum,gum_pain,nasal_congestion,clogged_ear,throat_pain,ear_pain,wheezing,rash,nausea,age,cough,fever,headache,chest_pain,runny_nose,sneeze,breath_difficulty";
 	@Autowired
 	private IndexMapping mapping;
 	
@@ -120,7 +120,7 @@ public class TrainNeuralNetworkImpl implements TrainNeuralNetwork {
 	            }
 	            
 	            project.setStatus(maxIndex);
-	            project.setDescription(maxProb+"% probability of contracting "+mapDisease(maxIndex)+" infection");
+	            project.setDescription(maxProb*100+"% probability of contracting "+mapDisease(maxIndex)+" infection");
 	     mav.setViewName("result");
 	    mav.addObject("formData", project);
 	    return mav;

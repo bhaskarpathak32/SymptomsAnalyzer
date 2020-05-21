@@ -70,7 +70,7 @@ from keras import regularizers
 def create_model():
     # create model
     model = Sequential()
-    model.add(Dense(16, input_dim=17, kernel_initializer='normal', kernel_regularizer=regularizers.l2(0.001), activation='relu'))
+    model.add(Dense(16, input_dim=18, kernel_initializer='normal', kernel_regularizer=regularizers.l2(0.001), activation='relu'))
     model.add(Dropout(0.25))
     model.add(Dense(8, kernel_initializer='normal', kernel_regularizer=regularizers.l2(0.001), activation='relu'))
     model.add(Dropout(0.25))

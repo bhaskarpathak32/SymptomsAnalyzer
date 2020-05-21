@@ -1,4 +1,4 @@
-package com.bhaskar.controller;
+package com.bhaskar.service;
 
 import java.io.IOException;
 

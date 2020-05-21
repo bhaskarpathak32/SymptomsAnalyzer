@@ -4,6 +4,7 @@
 CREATE SEQUENCE seq START 1;
 CREATE TABLE usertable (
   id                    BIGINT PRIMARY KEY,
+  country               BIGINT,
   name                  TEXT,
   age	                  BIGINT,
   cough	                BIGINT,

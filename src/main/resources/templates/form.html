@@ -2,15 +2,24 @@
 <html>
 <body>
 
-
-<form th:action="@{/api/corona_test}" th:object="${formData}" method="post" >
+  <span style="position:fixed;width:300px;height:100px;left:200px;top:50px;font-size:20px;color:red">Symptoms Analyzer</span>
+   <div style="width:800px;height:380px;left-padding:50px;left:200px;border:1px black;top:100px;position:fixed;border-radius:5px;background: white;box-shadow: 5px 10px;">
+    <form th:action="@{/api/corona_test}" th:object="${formData}" 
+    method="post" style="position:absolute;left:80px;top:20px;">
   <label for="fname">Name:</label>
-  <input type="text" id="name" name="name" th:field="*{name}" /><br><br>
+  <input type="text" id="name" name="name" th:field="*{name}" style="width:215px;border-style:solid;border-width:1px;border-color:#000;border-radius:50px" /><br>
+<br><label for="vehicle232"> age</label> <input type="number" id="age" name="age" value="0" min="0" max="200" th:field="*{age}" style="position:absolute;left:47px;border-style:solid;border-width:1px;border-color:#000;border-radius:50px;padding-left:10px"/> 
+  <label for="vehicle1" style="position:absolute;left:147px;"> fever</label> <input type="number" id="fever" name="fever" value="96" min="92" max="106" th:field="*{fever}" style="position:absolute;left:187px;border-style:solid;border-width:1px;border-color:#000;border-radius:50px;padding-left:10px" /> <br>
+  <label for="as" style="position:absolute;left:287px;top:39px"> Country</label> <select id="country" name="country" value="96" min="92" max="106" th:field="*{country}" style="position:absolute;left:347px;width:100px;top:40px;border-style:solid;border-width:1px;border-color:#000;border-radius:50px;padding-left:10px" />
+<option value="101">India</option>
+    <option value="103">China</option>
+    <option value="100">Samoa</option>
+</select><br>
 
- 
-  <label>Symptoms</label><br><br><br>
-  <input type="number" id="age" name="age" value="0" min="0" max="200" th:field="*{age}" /> <label for="vehicle232"> age</label><br><br>
-  <input type="number" id="fever" name="fever" value="96" min="92" max="106" th:field="*{fever}" /> <label for="vehicle1"> fever</label><br><br>
+ <div style="width:200px;height:20px;left:0px;border:1px black;top:110px;position:absolute;border-radius:5px;background: white;">
+
+  <label>Symptoms</label><br><br>
+
   
   <input type="checkbox" id="cough" name="cough" value="1" th:field="*{cough}" /><label for="vehicle2"> cough</label><br>
   
@@ -24,10 +33,13 @@
   <input type="checkbox" id="sneeze" name="sneeze" value="1" th:field="*{sneeze}" /><label for="vehicle3">sneeze</label> <br>
   
     
-  <input type="checkbox" id="breath_difficulty" name="breath_difficulty" value="1" th:field="*{breath_difficulty}" /><label for="vehicle3">breathing difficulty</label><br>
-  
+  <input type="checkbox" id="breath_difficulty" name="breath_difficulty" value="1" th:field="*{breath_difficulty}" /><label for="vehicle3">breathing difficulty</label>
+  <br>
   <input type="checkbox" id="bleeding_gum" name="bleeding_gum" value="1" th:field="*{bleeding_gum}" /><label for="vehicle3">bleeding gum</label><br>
-  <input type="checkbox" id="gum_pain" name="gum_pain" value="1" th:field="*{gum_pain}" /><label for="vehicle3">gum pain  </label><br>
+  <input type="checkbox" id="gum_pain" name="gum_pain" value="1" th:field="*{gum_pain}" /><label for="vehicle3">gum pain  </label>
+  <br>
+ </div>
+ <div style="width:200px;height:20px;left:300px;border:1px black;top:150px;position:absolute;border-radius:5px;background: white;"> 
   <input type="checkbox" id="nasal_congestion" name="nasal_congestion" value="1" th:field="*{nasal_congestion}" /><label for="vehicle3">nasal congestion</label><br>
   <input type="checkbox" id="clogged_ear" name="clogged_ear" value="1" th:field="*{clogged_ear}" /><label for="vehicle3">clogged ear  </label><br>
   <input type="checkbox" id="throat_pain" name="throat_pain" value="1" th:field="*{throat_pain}" /><label for="vehicle3">throat pain  </label><br>
@@ -36,9 +48,10 @@
   <input type="checkbox" id="rash" name="rash" value="1" th:field="*{rash}" /><label for="vehicle3">  rash</label><br>
   <input type="checkbox" id="nausea" name="nausea" value="1" th:field="*{nausea}" /><label for="vehicle3">  nausea</label><br>
   
-
-  <input type="submit" formmethod="post" value="Submit"/>
+</div>
+  <input style="position:absolute;top:330px;width:80px;height:30px;border-style:solid;border-width:1px;border-radius:20px;background-color:aquamarine" type="submit" formmethod="post" value="Submit" />
 </form>
-
+</div>
+ 
 </body>
 </html>

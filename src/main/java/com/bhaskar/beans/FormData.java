@@ -2,6 +2,7 @@ package com.bhaskar.beans;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,6 +26,8 @@ public class FormData implements Serializable {
 	@SequenceGenerator(name = "seq", sequenceName = "seq", allocationSize = 1)
 	private Long id;
 	public long age;
+	@Column(name="country")
+	public long country;
 	public String name;
 	public long cough;
 	public long fever;
